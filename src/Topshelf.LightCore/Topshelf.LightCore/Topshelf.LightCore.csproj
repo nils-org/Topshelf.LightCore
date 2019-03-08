@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net452</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.0.1</Version>
+    <Authors>Nils Andresen</Authors>
+    <Description>A simple LightCore bindings for Topshelf</Description>
+    <Copyright>Nils Andresen, 2019</Copyright>
+    <PackageProjectUrl>https://github.com/nils-a/Topshelf.LightCore</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/nils-a/Topshelf.LightCore</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <OutputPath>..\..\..\bin\</OutputPath>
+    <DocumentationFile>..\..\..\bin\Topshelf.LightCore.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LightCore" Version="1.5.1" />
+    <PackageReference Include="Topshelf" Version="4.2.0" />
+  </ItemGroup>
+
+</Project>
