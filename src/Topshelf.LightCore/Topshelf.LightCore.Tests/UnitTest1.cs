@@ -1,15 +1,15 @@
 ﻿using FluentAssertions;
 using LightCore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using Topshelf.LightCore;
+using NUnit.Framework;
 
 namespace Topshelf.LightCore.Tests
 {
-    [TestClass]
+    [TestFixture]
     public class UnitTest1
     {
-        [TestMethod]
+        [TestCase]
         public void TestMethod1()
         {
             // Arrange
