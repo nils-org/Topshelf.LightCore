@@ -18,7 +18,7 @@ test: off
 build: off
 
 build_script:
-  - ps: .\build\build.ps1
+  - ps: .\build\build.ps1 -Target AppVeyor
 
 cache:
   - "tools -> recipe.cake,tools/packages.config"
