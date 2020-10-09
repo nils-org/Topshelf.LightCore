@@ -3,3 +3,5 @@ obj/
 dist/
 .localhistory/
 .vs/
+/BuildArtifacts/
+/tools/
