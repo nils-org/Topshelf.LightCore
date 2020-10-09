@@ -20,11 +20,14 @@
     <PackageProjectUrl>https://github.com/nils-org/Topshelf.LightCore</PackageProjectUrl>
     <PackageReleaseNotes>https://github.com/nils-org/Topshelf.LightCore/releases</PackageReleaseNotes>
     <RepositoryType>git</RepositoryType>
+    <PackageIcon>Logo.png</PackageIcon>
+    <PackageIconUrl>https://cdn.jsdelivr.net/gh/nils-org/Topshelf.LightCore@develop/res/Logo-256.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
     <AdditionalFiles Include="$(SolutionDir)/stylecop.json" Link="stylecop.json" />
     <None Include="$(SolutionDir)/.editorconfig" Link=".editorconfig" />
+    <None Include="..\..\res\Logo-256.png" Link="Logo.png" Pack="true" PackagePath="Logo.png" />
   </ItemGroup>
 
   <ItemGroup>
