@@ -15,7 +15,7 @@
     <Authors>Nils Andresen</Authors>
     <Description>A simple LightCore bindings for Topshelf</Description>
     <Copyright>Copyright © $(FullYear) — Nils Andresen</Copyright>
-    <PackageLicenseExpression>MS-PL</PackageLicenseExpression>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/nils-org/Topshelf.LightCore</RepositoryUrl>
     <PackageProjectUrl>https://github.com/nils-org/Topshelf.LightCore</PackageProjectUrl>
     <PackageReleaseNotes>https://github.com/nils-org/Topshelf.LightCore/releases</PackageReleaseNotes>
