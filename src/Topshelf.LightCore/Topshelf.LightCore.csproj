@@ -23,6 +23,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <AdditionalFiles Include="$(SolutionDir)/stylecop.json" Link="stylecop.json" />
+    <None Include="$(SolutionDir)/.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="LightCore" Version="1.5.1" />
     <PackageReference Include="Topshelf" Version="4.2.0" />
      <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">

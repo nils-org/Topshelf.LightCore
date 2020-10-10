@@ -3,5 +3,8 @@ obj/
 dist/
 .localhistory/
 .vs/
-/BuildArtifacts/
+
+# wyam
+/config.wyam.*
+tools/
 /tools/
