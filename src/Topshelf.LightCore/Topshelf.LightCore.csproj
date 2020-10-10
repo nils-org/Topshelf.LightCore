@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net452</TargetFramework>
+    <PackageId>Topshelf.LightCore</PackageId>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <StartYear>2019</StartYear>
+    <EndYear>$([System.DateTime]::Today.Year)</EndYear>
+    <FullYear Condition="'$(StartYear)'=='$(EndYear)'">$(StartYear)</FullYear>
+    <FullYear Condition="'$(StartYear)'!='$(EndYear)'">$(StartYear)-$(EndYear)</FullYear>
+    <Version>1.0.0.0</Version>
+    <Authors>Nils Andresen</Authors>
+    <Description>A simple LightCore bindings for Topshelf</Description>
+    <Copyright>Copyright © $(FullYear) — Nils Andresen</Copyright>
+    <PackageLicenseExpression>MS-PL</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/nils-org/Topshelf.LightCore</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/nils-org/Topshelf.LightCore</PackageProjectUrl>
+    <PackageReleaseNotes>https://github.com/nils-org/Topshelf.LightCore/releases</PackageReleaseNotes>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="$(SolutionDir)/stylecop.json" Link="stylecop.json" />
+    <None Include="$(SolutionDir)/.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LightCore" Version="1.5.1" />
+    <PackageReference Include="Topshelf" Version="4.2.0" />
+     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>

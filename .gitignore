@@ -3,3 +3,8 @@ obj/
 dist/
 .localhistory/
 .vs/
+
+# wyam
+/config.wyam.*
+tools/
+/tools/
