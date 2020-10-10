@@ -1,7 +1,6 @@
 ﻿using FluentAssertions;
 using LightCore;
 using System;
-using Topshelf.LightCore;
 using NUnit.Framework;
 
 namespace Topshelf.LightCore.Tests
@@ -33,7 +32,7 @@ namespace Topshelf.LightCore.Tests
                 x.UseLightCore(container);
                 x.Service<FakeSevice>(s =>
                 {
-                    s.ConstructUsingLightCore<FakeSevice>();
+                    s.ConstructUsingLightCore();
                     s.WhenStarted(tc => tc.Start());
                     s.WhenStopped(tc => tc.Stop());
                     s.AfterStartingService(tc =>
