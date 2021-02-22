@@ -13,10 +13,10 @@ jobs:
     if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name != github.repository
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os: [windows-latest, ubuntu-latest, macos-latest]
 
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 0
           ref: ${{ github.event.ref }}
@@ -26,13 +26,8 @@ jobs:
           path: tools
           key: ${{ runner.os }}-tools-${{ hashFiles('recipe.cake') }}
       - name: Build project
-        uses: cake-build/cake-action@v1
-        with:
-          script-path: recipe.cake
-          target: CI
-          verbosity: Diagnostic
-          cake-version: 0.38.5
-          cake-bootstrap: true
+        run: ./build.ps1 --target=CI --verbosity=Diagnostic
+        shell: pwsh
       # currently, Cake.Recipe does not upload artifacts when run on gh-actions
       - name: Upload Issues
         uses: actions/upload-artifact@v2
