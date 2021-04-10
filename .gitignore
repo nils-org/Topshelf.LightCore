@@ -9,3 +9,4 @@ dist/
 tools/
 /tools/
 /BuildArtifacts/
+.history/
