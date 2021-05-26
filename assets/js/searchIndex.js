@@ -39,20 +39,6 @@ var searchModule = function() {
     a(
         {
             id:0,
-            title:"HostConfiguratorExtension",
-            content:"HostConfiguratorExtension",
-            description:'',
-            tags:''
-        },
-        {
-            url:'/Topshelf.LightCore/api/Topshelf.LightCore/HostConfiguratorExtension',
-            title:"HostConfiguratorExtension",
-            description:""
-        }
-    );
-    a(
-        {
-            id:1,
             title:"LightCoreServiceConfiguratorExtensions",
             content:"LightCoreServiceConfiguratorExtensions",
             description:'',
@@ -61,6 +47,20 @@ var searchModule = function() {
         {
             url:'/Topshelf.LightCore/api/Topshelf.LightCore/LightCoreServiceConfiguratorExtensions',
             title:"LightCoreServiceConfiguratorExtensions",
+            description:""
+        }
+    );
+    a(
+        {
+            id:1,
+            title:"HostConfiguratorExtension",
+            content:"HostConfiguratorExtension",
+            description:'',
+            tags:''
+        },
+        {
+            url:'/Topshelf.LightCore/api/Topshelf.LightCore/HostConfiguratorExtension',
+            title:"HostConfiguratorExtension",
             description:""
         }
     );
