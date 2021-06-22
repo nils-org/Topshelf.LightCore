@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net452</TargetFramework>
+    <TargetFramework>net461</TargetFramework>
     <PackageId>Topshelf.LightCore</PackageId>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -16,7 +16,7 @@
     <FullYear Condition="'$(StartYear)'!='$(EndYear)'">$(StartYear)-$(EndYear)</FullYear>
     <Version>1.0.0.0</Version>
     <Authors>Nils Andresen</Authors>
-    <Description>A simple LightCore bindings for Topshelf</Description>
+    <Description>A simple LightCore binding for Topshelf</Description>
     <Copyright>Copyright © $(FullYear) — Nils Andresen</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/nils-org/Topshelf.LightCore</RepositoryUrl>
@@ -34,8 +34,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="LightCore" Version="1.5.1" />
-    <PackageReference Include="Topshelf" Version="4.2.1" />
+    <PackageReference Include="LightCore" Version="1.5.1" PrivateAssets="all" />
+    <PackageReference Include="Topshelf" Version="4.0.0"  PrivateAssets="all" />
      <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>

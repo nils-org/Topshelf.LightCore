@@ -9,3 +9,5 @@ dist/
 tools/
 /tools/
 /BuildArtifacts/
+.history/
+*.user
