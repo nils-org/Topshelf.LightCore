@@ -1,14 +1,15 @@
-﻿using FluentAssertions;
-using LightCore;
+﻿using LightCore;
 using System;
-using NUnit.Framework;
+
+using Shouldly;
+
+using Xunit;
 
 namespace Topshelf.LightCore.Tests
 {
-    [TestFixture]
     public class UnitTest1
     {
-        [TestCase]
+        [Fact]
         public void TestMethod1()
         {
             // Arrange
@@ -20,7 +21,7 @@ namespace Topshelf.LightCore.Tests
             builder.Register(x =>
             {
                 diWasCalled = true;
-                return new FakeSevice(
+                return new FakeService(
                     () => startCalled = true,
                     () => stopCalled = true);
             });
@@ -30,7 +31,7 @@ namespace Topshelf.LightCore.Tests
             {
                 x.ApplyCommandLine(string.Empty); // fake "normal" start
                 x.UseLightCore(container);
-                x.Service<FakeSevice>(s =>
+                x.Service<FakeService>(s =>
                 {
                     s.ConstructUsingLightCore();
                     s.WhenStarted(tc => tc.Start());
@@ -47,19 +48,19 @@ namespace Topshelf.LightCore.Tests
             var actual = host.Run();
 
             // assert
-            actual.Should().Be(TopshelfExitCode.Ok);
-            diWasCalled.Should().BeTrue();
-            startCalled.Should().BeTrue();
-            stopCalled.Should().BeTrue();
+            actual.ShouldBe(TopshelfExitCode.Ok);
+            diWasCalled.ShouldBeTrue();
+            startCalled.ShouldBeTrue();
+            stopCalled.ShouldBeTrue();
         }
     }
 
-    internal class FakeSevice
+    internal class FakeService
     {
         private readonly Action start;
         private readonly Action stop;
 
-        internal FakeSevice(Action start, Action stop)
+        internal FakeService(Action start, Action stop)
         {
             this.start = start;
             this.stop = stop;
