@@ -51,6 +51,7 @@ jobs:
       with:
         java-version: "11"
         java-package: jre
+        distribution: zulu
 
     - name: Build and analyze
       env:
